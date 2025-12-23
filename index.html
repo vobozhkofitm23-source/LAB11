@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тортики & Тістечка</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Тортики <span class="heart">&</span> Тістечка</h1>
+    </header>
+
+    <main class="container">
+        <aside class="filters">
+            <div class="calorie-filter">
+                <h2>Калорії у порції</h2>
+                <div class="slider-container">
+                    <input type="range" id="calorieMin" min="0" max="600" value="0" class="slider">
+                    <input type="range" id="calorieMax" min="0" max="600" value="400" class="slider">
+                    <div class="slider-track"></div>
+                </div>
+                <div class="calorie-range">
+                    <span id="calorieDisplay">Від 0 до 400 кКал</span>
+                </div>
+            </div>
+
+            <div class="category-filters">
+                <button class="filter-btn" data-category="all">Всі</button>
+                <button class="filter-btn" data-category="пиріг">Пиріг</button>
+                <button class="filter-btn" data-category="рулет">Рулет</button>
+                <button class="filter-btn" data-category="сирники">Сирники</button>
+                <button class="filter-btn" data-category="тістечко">Тістечко</button>
+                <button class="filter-btn" data-category="торт">Торт</button>
+            </div>
+
+            <button class="reset-btn" id="resetFilter">Скинути фільтр</button>
+        </aside>
+
+        <section class="gallery">
+            <div class="dessert-card" data-category="торт" data-calories="412">
+                <div class="card-image">
+                    <img src="peak/tort-smetankoviy.jpg" alt="Торт: Шоколадний сніг">
+                </div>
+                <div class="card-content">
+                    <h3>Торт: Шоколадний сніг</h3>
+                    <p class="calories">Калорії у порції 412 кКал</p>
+                </div>
+            </div>
+
+            <div class="dessert-card" data-category="тістечко" data-calories="287">
+                <div class="card-image">
+                    <img src="peak/tistechko-mafin.jpg" alt="Тістечко: Полуничний рай">
+                </div>
+                <div class="card-content">
+                    <h3>Тістечко: Полуничний рай</h3>
+                    <p class="calories">Калорії у порції 287 кКал</p>
+                </div>
+            </div>
+
+            <div class="dessert-card" data-category="сирники" data-calories="376">
+                <div class="card-image">
+                    <img src="peak/syrniki-tri-yagodi.jpg" alt="Сирники: З малиною">
+                </div>
+                <div class="card-content">
+                    <h3>Сирники: З малиною</h3>
+                    <p class="calories">Калорії у порції 376 кКал</p>
+                </div>
+            </div>
+
+            <div class="dessert-card" data-category="торт" data-calories="534">
+                <div class="card-image">
+                    <img src="peak/tort-smachniy.jpg" alt="Торт: Карамельний мрійник">
+                </div>
+                <div class="card-content">
+                    <h3>Торт: Карамельний мрійник</h3>
+                    <p class="calories">Калорії у порції 534 кКал</p>
+                </div>
+            </div>
+
+            <div class="dessert-card" data-category="рулет" data-calories="321">
+                <div class="card-image">
+                    <img src="peak/hq720.jpg" alt="Рулет: З вершками">
+                </div>
+                <div class="card-content">
+                    <h3>Рулет: З вершками</h3>
+                    <p class="calories">Калорії у порції 321 кКал</p>
+                </div>
+            </div>
+
+            <div class="dessert-card" data-category="пиріг" data-calories="445">
+                <div class="card-image">
+                    <img src="peak/ptys-cukiernia-sowa-01_crop_2.jpg" alt="Пиріг: Яблучний смак">
+                </div>
+                <div class="card-content">
+                    <h3>Пиріг: Яблучний смак</h3>
+                    <p class="calories">Калорії у порції 445 кКал</p>
+                </div>
+            </div>
+
+            <div class="dessert-card" data-category="торт" data-calories="567">
+                <div class="card-image">
+                    <img src="peak/images.jpg" alt="Торт: Медовий вечір">
+                </div>
+                <div class="card-content">
+                    <h3>Торт: Медовий вечір</h3>
+                    <p class="calories">Калорії у порції 567 кКал</p>
+                </div>
+            </div>
+
+            <div class="dessert-card" data-category="тістечко" data-calories="298">
+                <div class="card-image">
+                    <img src="peak/загружено.jpg" alt="Тістечко: Ванільна мрія">
+                </div>
+                <div class="card-content">
+                    <h3>Тістечко: Ванільна мрія</h3>
+                    <p class="calories">Калорії у порції 298 кКал</p>
+                </div>
+            </div>
+
+            <div class="dessert-card" data-category="тістечко" data-calories="389">
+                <div class="card-image">
+                    <img src="peak/загружено (1).jpg" alt="Тістечко: Цитрусовий фреш">
+                </div>
+                <div class="card-content">
+                    <h3>Тістечко: Цитрусовий фреш</h3>
+                    <p class="calories">Калорії у порції 389 кКал</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-contacts">
+                <span>Контакти:</span>
+                <a href="mailto:tortik@smakota.ua">tortik@smakota.ua</a>
+            </div>
+            <div class="footer-copyright">
+                <span>© 2019 Smakota</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
